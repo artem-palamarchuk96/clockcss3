@@ -14,7 +14,7 @@ function clockGo() {
 	// start point data
 	var degreeSeconds = seconds*6;
 	var degreeMinutes = minutes*6;
-	var degreeHours = (hours/2)*30;
+	var degreeHours = hours*30;
 	// start point rotation
 	secArrow.style.transform = "rotate("+degreeSeconds+"deg)";
 	minArrow.style.transform = "rotate("+degreeMinutes+"deg)";
@@ -36,7 +36,7 @@ function clockGo() {
 	// hours interval
 	function hoursInterval() {
 		var hours = new Date().getHours();
-		var degreeHours = (hours/2)*30;
+		var degreeHours = hours*30;
 		var styles = getComputedStyle(hourArrow).getPropertyValue('transform');
 		hourArrow.style.transform = "rotate("+degreeHours+"deg)";
 	}
